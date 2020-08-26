@@ -2,7 +2,7 @@ package main
 
 import (
 	"gihub.com/cronjob-scheduler/cron"
-	"gihub.com/cronjob-scheduler/utility"
+	"time"
 )
 
 func main() {
@@ -11,7 +11,6 @@ func main() {
 		cron.SecondOptional | cron.Minute | cron.Hour | cron.Dom | cron.Month | cron.Dow | cron.Descriptor,
 	)))
 	c.Start()
-	printfLogger := utility.DefaultLogger
-	printfLogger.Info("Test")
+	time.Sleep(3 * time.Second)
 }
 
